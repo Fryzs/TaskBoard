@@ -82,6 +82,7 @@ namespace WinFormsApp10
             // 
             // panelHeader
             // 
+            panelHeader.BackColor = Color.Gray;
             panelHeader.Controls.Add(panelHdrRight);
             panelHeader.Controls.Add(panelHdrLeft);
             panelHeader.Dock = DockStyle.Top;
@@ -154,6 +155,7 @@ namespace WinFormsApp10
             // 
             // panelSidebar
             // 
+            panelSidebar.BackColor = Color.Gray;
             panelSidebar.Controls.Add(panelSidebarNav);
             panelSidebar.Controls.Add(panelSidebarFoot);
             panelSidebar.Dock = DockStyle.Left;
@@ -268,12 +270,14 @@ namespace WinFormsApp10
             // panelContent
             // 
             panelContent.AutoScroll = true;
+            panelContent.BackColor = Color.FromArgb(18, 18, 30);
             panelContent.Dock = DockStyle.Fill;
             panelContent.Location = new Point(212, 60);
             panelContent.Name = "panelContent";
             panelContent.Padding = new Padding(8);
             panelContent.Size = new Size(838, 570);
             panelContent.TabIndex = 0;
+            panelContent.Paint += panelContent_Paint;
             // 
             // panelStatusBar
             // 
@@ -310,6 +314,7 @@ namespace WinFormsApp10
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Silver;
             ClientSize = new Size(1050, 660);
             Controls.Add(panelContent);
             Controls.Add(panelSidebar);
